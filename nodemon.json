@@ -1,0 +1,6 @@
+{
+    "env":{
+        "REST_URL":"https://mylibbbybook.herokuapp.com",
+        "JWT_KEY":"post_OPP"
+    }
+}

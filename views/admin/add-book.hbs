@@ -1,0 +1,37 @@
+<section>
+    <div class="container mt-5">
+        <h1 class="text-center">Add Book</h1>
+        <div style="margin: auto;" class="col-md-6 ">
+        <div class="">
+            <form method="post" action="https://mylibbbybook.herokuapp.com/books/" enctype="multipart/form-data">
+            
+                <div class="form-group">
+                    <label for="">Book Name</label>
+                    <input type="name" class="form-control" name="name">
+                </div>
+                  <div class="form-group">
+                    <label for="">Book Price</label>
+                    <input type="name" class="form-control" name="price">
+                </div>
+                <div class="form-group">
+                    <label for="">Book Author</label>
+                    <input type="name" class="form-control" name="author">
+
+                </div>
+                <div class="form-group">
+                    <label for="">Book Category</label>
+                    <input type="name" class="form-control" name="cat">
+
+                </div>
+                {{!-- <div class="form-group">
+                    <label for="">Book Image</label>
+                    <input type="file" class="form-control" name="Pimg">
+
+                </div> --}}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+         </div>
+
+    </div>
+</section>

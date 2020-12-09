@@ -1,0 +1,80 @@
+<section>
+    <div class="container">
+
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Catagory</th>
+                    <th scope="col">Author</th>
+                    {{#if userview}}
+                    <th scope="col">Picked Date</th>
+                    <th scope="col">Status</th>
+                    {{else}}
+                    <th scope="col">Added Date</th>
+                    <th scope="col">Avilable</th>
+                    <th scope="col">Taken By</th>
+                    <th scope="col">Qr Code</th>
+                    {{/if}}
+
+
+                    {{!-- <th scope="col">Taken by</th> --}}
+                    {{!-- <th>Image</th> --}}
+                </tr>
+            </thead>
+            <tbody>
+
+                {{#if userview}}
+                {{#each books}}
+
+                <tr>
+                    {{!--  --}}
+                    <th scope="row">{{this.no}}</th>
+                    <td>{{this.name}}</td>
+                    <td>{{this.cat}}</td>
+                    <td>{{this.author}}</td>
+                    <td>{{this.takendate}}</td>
+                    <td>{{this.status}}</td>
+                    {{/each}}
+                    {{else}}
+                    <td>
+
+                </tr>
+                {{#each books}}
+                <tr>
+                    {{!--  --}}
+                    <th scope="row">{{this.no}}</th>
+                    <td>{{this.name}}</td>
+                    <td>{{this.cat}}</td>
+                    <td>{{this.author}}</td>
+                    <td>{{this.addeddate}}</td>
+                    <td>
+                        {{#if this.avilable}}
+                        <i style="color:green" class="las la-check"></i>
+                        {{else}}
+                        <i style="color:red" class="las la-times"></i>
+                        {{/if}}
+                    </td>
+                    <td>{{this.takenby}}</td>
+                    <td><img src="images/qr.png" style="height: 50px;" alt="qr"></td>
+                    {{!-- <td>{{this.takenby}}</td> --}}
+                    {{!-- <td><img height="50px" width="50px" src="{{this.image}}" alt=""></td> --}}
+
+
+
+
+                </tr>
+                {{/each}}
+                {{/if}}
+
+                {{!-- <td>{{this.takenby}}</td> --}}
+                {{!-- <td><img height="50px" width="50px" src="{{this.image}}" alt=""></td> --}}
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+</section>
